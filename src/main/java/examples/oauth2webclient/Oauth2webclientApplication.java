@@ -40,7 +40,7 @@ public class Oauth2webclientApplication {
     @RestController
     public static class GithubController {
         @GetMapping("/github/code")
-        public String getAuthCode(@RegisteredOAuth2AuthorizedClient("github") OAuth2AuthorizedClient client) {
+        public String getAuthCode(@RegisteredOAuth2AuthorizedClient("github43") OAuth2AuthorizedClient client) {
             final OAuth2AccessToken accessToken = client.getAccessToken();
             return accessToken.getTokenValue();
         }
