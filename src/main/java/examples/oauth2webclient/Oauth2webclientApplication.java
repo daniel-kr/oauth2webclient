@@ -47,7 +47,7 @@ public class Oauth2webclientApplication {
             final String accessTokenValue = accessToken.getTokenValue();
             final GitHub gitHub = GitHub.connectUsingOAuth(accessTokenValue);
 
-            return gitHub.listOrganizations().toList().toString();
+            return gitHub.getRepository("collaborationFactory/cplace").getName();
         }
     }
 }
